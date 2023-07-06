@@ -116,7 +116,6 @@ export default {
       )
         .then((response) => response.json())
         .then(async (json) => {
-          // console.log(json)
           if (json.cod === "404") {
             container.style.height = "590px";
             weatherBox.style.display = "none";
