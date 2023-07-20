@@ -20,7 +20,7 @@
 
       <div class="loading">
         <div class="d-flex justify-content-center loading-detail">
-          <div class="spinner-border" role="status">
+          <div class="spinner-border text-light" role="status">
             <span class="sr-only">Loading...</span>
           </div>
         </div>
@@ -106,7 +106,6 @@ export default {
       const loading = document.querySelector(".loading");
       const week = document.querySelector(".week");
       const detail = document.querySelector(".detail");
-      const loadingWeek = document.querySelector(".loading-week");
 
       const city = document.querySelector(".search-box input").value;
       if (city === "") return;
@@ -137,8 +136,6 @@ export default {
             loading.style.display = "block";
             loading.classList.add("fadeInloading");
             detail.style.display = "none";
-            loadingWeek.style.display = "block";
-            loadingWeek.classList.add("fadeInloading");
 
             await new Promise((resolve, reject) => {
               setTimeout(() => {
@@ -193,10 +190,7 @@ export default {
         .then(async (json) => {
           const week = document.querySelector(".week");
           const detail = document.querySelector(".detail");
-          const loadingWeek = document.querySelector(".loading-week");
 
-          loadingWeek.style.display = "none";
-          loadingWeek.classList.remove("fadeInloading");
           detail.style.display = "";
           if (this.defaultWeekData !== "") detail.classList.add("fadeIn");
           else detail.classList.add("fadeInFast");
@@ -256,12 +250,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #06283d;
 }
 
 .week {
   height: 590px !important;
-  background-color: #eaeff1 !important;
+  background-color: #3079C2 !important;
   display: none;
   scale: 0;
   opacity: 0;
@@ -272,13 +265,6 @@ export default {
   display: block;
   animation: 1.5s fadeIn forwards;
   animation-delay: 0.2s;
-}
-
-@keyframes fadeInweek {
-  to {
-    scale: 1;
-    opacity: 1;
-  }
 }
 
 .weekly {
@@ -350,7 +336,7 @@ export default {
   position: relative;
   width: 460px;
   height: 105px;
-  background: #fff;
+  background: #3079C2;
   padding: 28px 32px;
   overflow: hidden;
   border-radius: 18px;
@@ -385,9 +371,9 @@ export default {
   padding: 10px 0px 8px 60px;
 }
 
-/* .search-box input:focus {
+.search-box input:focus {
   outline: none;
-} */
+}
 
 .search-box input::placeholder {
   font-size: 20px;
@@ -419,10 +405,6 @@ export default {
   margin-left: 1.5rem;
 }
 
-/* .search-box i:hover {
-  color: #dff6ff;
-} */
-
 .search-box button i {
   display: contents;
 }
@@ -444,7 +426,7 @@ export default {
 
 .weather-box .temperature {
   position: relative;
-  color: #06283d;
+  color: #fff;
   font-size: 4rem;
   font-weight: 800;
   margin-top: 30px;
@@ -458,7 +440,7 @@ export default {
 }
 
 .weather-box .description {
-  color: #06283d;
+  color: #fff;
   font-size: 22px;
   font-weight: 500;
   text-transform: capitalize;
@@ -490,20 +472,20 @@ export default {
 }
 
 .weather-details i {
-  color: #06283d;
+  color: #fff;
   font-size: 32px;
   margin-right: 16px;
   margin-top: -12px;
 }
 
 .weather-details span {
-  color: #06283d;
+  color: #fff;
   font-size: 22px;
   font-weight: 500;
 }
 
 .weather-details p {
-  color: #06283d;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
 }
@@ -570,6 +552,29 @@ export default {
   to {
     scale: 1;
     opacity: 1;
+  }
+}
+
+@media (max-width: 920px) {
+  .body {
+    padding: 2rem !important;
+  }
+
+  .week {
+    margin-top: 2rem;
+  }
+
+  .detail-list,
+  .search-box,
+  .weather-details {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .wind i,
+  .humidity i {
+    display: none;
   }
 }
 </style>
