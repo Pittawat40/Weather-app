@@ -20,7 +20,7 @@
 
       <div class="loading">
         <div class="d-flex justify-content-center loading-detail">
-          <div class="spinner-border text-light" role="status">
+          <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
           </div>
         </div>
@@ -250,11 +250,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #06283d;
 }
 
 .week {
   height: 590px !important;
-  background-color: #3079C2 !important;
+  background-color: #eaeff1 !important;
   display: none;
   scale: 0;
   opacity: 0;
@@ -336,7 +337,7 @@ export default {
   position: relative;
   width: 460px;
   height: 105px;
-  background: #3079C2;
+  background: #eaeff1;
   padding: 28px 32px;
   overflow: hidden;
   border-radius: 18px;
@@ -426,7 +427,7 @@ export default {
 
 .weather-box .temperature {
   position: relative;
-  color: #fff;
+  color: #06283d;
   font-size: 4rem;
   font-weight: 800;
   margin-top: 30px;
@@ -440,7 +441,7 @@ export default {
 }
 
 .weather-box .description {
-  color: #fff;
+  color: #06283d;
   font-size: 22px;
   font-weight: 500;
   text-transform: capitalize;
@@ -472,20 +473,20 @@ export default {
 }
 
 .weather-details i {
-  color: #fff;
+  color: #06283d;
   font-size: 32px;
   margin-right: 16px;
   margin-top: -12px;
 }
 
 .weather-details span {
-  color: #fff;
+  color: #06283d;
   font-size: 22px;
   font-weight: 500;
 }
 
 .weather-details p {
-  color: #fff;
+  color: #06283d;
   font-size: 14px;
   font-weight: 500;
 }
@@ -557,7 +558,8 @@ export default {
 
 @media (max-width: 920px) {
   .body {
-    padding: 2rem !important;
+    padding: 2rem;
+    height: 220vh;
   }
 
   .week {
