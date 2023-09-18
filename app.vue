@@ -503,7 +503,8 @@ export default {
 }
 
 .not-found img {
-  margin-top: 10px;
+  margin-top: 50px;
+  border-radius: 5px;
   width: 90%;
 }
 
@@ -511,6 +512,7 @@ export default {
   color: #06283d;
   font-size: 22px;
   font-weight: 500;
+  margin-top: 5px;
 }
 
 .weather-box,
