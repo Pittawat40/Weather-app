@@ -246,7 +246,8 @@ export default {
   border: 0;
   outline: none;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -561,7 +562,6 @@ export default {
 @media (max-width: 920px) {
   .body {
     padding: 2rem;
-    height: 220vh;
   }
 
   .week {
